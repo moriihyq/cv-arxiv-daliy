@@ -9,8 +9,8 @@ on:
     - cron:  "* 12 * * *"  # Runs every minute of 12th hour
 env:
  
-  GITHUB_USER_NAME: your_github_id yuuki-huang
-  GITHUB_USER_EMAIL: your_email_addr huangyouqi_sx@163.com
+  GITHUB_USER_NAME: your_github_id # your github id
+  GITHUB_USER_EMAIL: your_email_addr # your email address
   
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -29,8 +29,7 @@ jobs:
       - name: Set up Python Env
         uses: actions/setup-python@v2
         with:
-          python-version: 3.12
-       
+          python-version: 3.12       
  
       - name: Install dependencies
         run: |
@@ -38,9 +37,9 @@ jobs:
           pip install arxiv
           pip install requests
           
-     - name: Run daily arxiv
-       run: |
-         python daily_arxiv.py
+      - name: Run daily arxiv 
+        run: |
+          python daily_arxiv.py
           
       - name: Push new cv-arxiv-daily.md
         uses: github-actions-x/commit@v2.8
