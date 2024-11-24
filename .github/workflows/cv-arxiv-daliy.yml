@@ -38,7 +38,7 @@ jobs:
           pip install arxiv
           pip install requests
           
-      - name: Run daily arxiv 
+      - name: Run daily_arxiv.py 
         run: |
           python daily_arxiv.py
           
