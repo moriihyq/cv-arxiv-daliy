@@ -1,11 +1,6 @@
 # name of workflow
 name: Run Arxiv Papers Daily
 
-- name: Upload file to workflow
-  uses: actions/upload-artifact@v2
-  with:
-    name: daily_arxiv.py
-    path:/home/runner/work/cv-arxiv-daily/cv-arxiv-daily/daily_arxiv.py
  
 # Controls when the workflow will run
 on:
